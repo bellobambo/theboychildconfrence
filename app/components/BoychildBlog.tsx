@@ -18,10 +18,10 @@ const BoychildBlog = () => {
   const scrollToSection = useCallback((href: string) => {
     // Close mobile menu if open
     setIsOpen(false);
-    
+
     // Remove # from href to get the id
     const id = href.replace('#', '');
-    
+
     if (id === 'home') {
       // For home, scroll to top
       window.scrollTo({
@@ -30,13 +30,13 @@ const BoychildBlog = () => {
       });
       return;
     }
-    
+
     const element = document.getElementById(id);
     if (element) {
       const offset = 80; // Adjust based on your navbar height (20px scroll-mt + 60px navbar?)
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
-      
+
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
@@ -63,8 +63,8 @@ const BoychildBlog = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
             <div className="shrink-0">
-              <a 
-                href="#home" 
+              <a
+                href="#home"
                 onClick={(e) => handleNavClick(e, '#home')}
                 className="text-white font-extrabold text-xl tracking-wide uppercase cursor-pointer hover:text-blue-100 transition-colors"
               >
@@ -176,13 +176,14 @@ const BoychildBlog = () => {
                 "Assists in strategy for growth of the organization"
               ]}
             />
+
             <MemberCard
-              name="Victoria ALIU"
-              role="Project Manager/Event Director"
+              name="Ojuerayetan Emmanuel"
+              role="Project Manager"
               responsibilities={[
-                "Directly manages planning and execution of BoyChild Conference 2026",
-                "Supervises all committees to ensure deadlines are met",
-                "Reports progress updates to the Convener"
+                "Turns ideas into results by ensuring organizational goals are achieved through effective planning and control",
+                "Directly manages the planning and execution of the BoyChild Conference 2026",
+                "Supervises all committees and reports progress updates to the Convener"
               ]}
             />
             <MemberCard
@@ -266,10 +267,10 @@ const BoychildBlog = () => {
         <div className="flex flex-col lg:flex-row gap-8 items-stretch">
           <div className="w-full lg:w-1/2 p-8 bg-blue-50 border-l-8 border-[#89CFF0] rounded-r-2xl flex flex-col justify-center">
             <div className="flex flex-col md:flex-row items-center gap-6">
-              <img 
-                src="/img6.jpg" 
-                alt="Future Leader" 
-                className="w-40 h-40 object-cover rounded-xl shadow-lg border-4 border-white shrink-0" 
+              <img
+                src="/img6.jpg"
+                alt="Future Leader"
+                className="w-40 h-40 object-cover rounded-xl shadow-lg border-4 border-white shrink-0"
               />
               <div>
                 <p className="text-gray-900 font-black text-xl italic leading-tight">
@@ -283,19 +284,19 @@ const BoychildBlog = () => {
           </div>
           <div className="w-full lg:w-1/2 p-8 bg-[#89CFF0] rounded-2xl text-white shadow-xl flex flex-col justify-center">
             <div className="flex flex-col md:flex-row items-center gap-6">
-              <img 
-                src="/img5.jpg" 
-                alt="Sponsorship" 
-                className="w-40 h-40 object-cover rounded-xl shadow-lg border-4 border-white shrink-0" 
+              <img
+                src="/img5.jpg"
+                alt="Sponsorship"
+                className="w-40 h-40 object-cover rounded-xl shadow-lg border-4 border-white shrink-0"
               />
               <div className="text-center md:text-left">
                 <h2 className="text-3xl font-black uppercase italic tracking-tighter">Partner With Us</h2>
                 <p className="mt-3 text-sm font-medium leading-snug">
-                  Help us build the next generation of leaders. For sponsorship enquiries, contact 
+                  Help us build the next generation of leaders. For sponsorship enquiries, contact
                   <strong className="block text-white mt-1">Kehinde James Oluwole</strong>
                 </p>
-                <a 
-                  href="tel:08138209313" 
+                <a
+                  href="tel:08138209313"
                   className="inline-block mt-4 bg-white text-[#89CFF0] px-6 py-2 rounded-full font-bold text-sm shadow-md hover:bg-blue-50 transition-all"
                 >
                   Call: 08138209313
@@ -340,8 +341,8 @@ const BoychildBlog = () => {
             <h4 className="font-bold text-lg mb-4 text-[#89CFF0]">Quick Navigation</h4>
             <ul className="text-sm text-gray-400 space-y-2">
               <li>
-                <a 
-                  href="#mission" 
+                <a
+                  href="#mission"
                   onClick={(e) => handleQuickNavClick(e, '#mission')}
                   className="hover:text-white transition-colors cursor-pointer block py-1"
                 >
@@ -349,8 +350,8 @@ const BoychildBlog = () => {
                 </a>
               </li>
               <li>
-                <a 
-                  href="#team" 
+                <a
+                  href="#team"
                   onClick={(e) => handleQuickNavClick(e, '#team')}
                   className="hover:text-white transition-colors cursor-pointer block py-1"
                 >
@@ -358,8 +359,8 @@ const BoychildBlog = () => {
                 </a>
               </li>
               <li>
-                <a 
-                  href="#sponsorship" 
+                <a
+                  href="#sponsorship"
                   onClick={(e) => handleQuickNavClick(e, '#sponsorship')}
                   className="hover:text-white transition-colors cursor-pointer block py-1"
                 >
